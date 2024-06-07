@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Adit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+        }
+
+        button {
+            background-color: #008cba;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #008cba;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function showDialogs() {
+            // Meminta nama pengguna
+            let userName = prompt("Tolong masukkan nama anda:");
+
+            if (userName) {
+                // Menampilkan alert dengan nama pengguna
+                alert(`Selamat Datang, ${userName}. Klik ok di bawah ini.`);
+
+                // Menampilkan dialog konfirmasi dengan nama pengguna
+                let userConfirmed = confirm(`${userName}, apakah Anda ingin melanjutkan?`);
+                if (userConfirmed) {
+                    alert(`${userName}, klik ok untuk lanjut `);
+                } 
+            } else {
+                alert("anda tidak memasukkan nama anda.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showDialogs()">klik disini!</button>
+    </div>
+</body>
+</html>
